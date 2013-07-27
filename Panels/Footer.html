@@ -1,0 +1,94 @@
+
+	
+		
+	</div><!-- Outer --> 
+	<div id="ContainerFooter">
+		<div id="FooterUpper">
+			<div class="Inner">
+				<div class="Column">
+					%%Panel.PagesMenu%%
+				</div><!-- Column -->
+				<div class="Column">
+					%%Panel.SideShopByBrand%%
+				</div><!-- Column -->
+				<div class="Column">
+					%%Panel.FooterCategoryList%%
+				</div><!-- Column -->
+				<div class="Column">
+					%%Panel.HomeRecentBlogs%%
+					%%Panel.SideNewsletterBox%%
+				</div><!-- Column -->
+				<div class="Column">
+					%%Panel.SocialLinks%%
+				</div><!-- Column -->
+				<div class="clear"></div>
+			</div>
+		</div><!-- FooterUpper -->	
+	</div><!-- ContainerFooter -->		
+	<div class="clear"></div>		
+			
+	
+	
+	
+<p style="display: none" id="currencyPrices">
+	%%GLOBAL_AllPricesAreInCurrency%%
+				
+</p>
+<div style="display: none;">
+
+%%Panel.SideCartContents%%
+</div>
+	
+
+
+	%%GLOBAL_DesignModeHTML%%
+	%%GLOBAL_QueryList%%
+	%%GLOBAL_DesignModeScriptTag%%
+	%%GLOBAL_LiveChatFooterCode%%
+
+	%%GLOBAL_OptimizerTrackingScript%%
+	%%GLOBAL_OptimizerConversionScript%%
+	%%GLOBAL_OptimizerSetCookieScript%%
+
+	%%GLOBAL_FooterScripts%%
+	%%SNIPPET_FastCartThickBoxJs%%
+
+    %%GLOBAL_DebugDetails%%
+	
+<script type="text/javascript">
+function _showFastCart(modalOptions) {
+	modalOptions = $.extend({
+		width: 820,
+		closeTxt: true,
+		onShow: function() {
+			$("#fastCartSuggestive a[href*='cart.php?action=add']").unbind('click');
+
+			var itemTxt = $('#fastCartNumItemsTxt').html().replace('items', '');
+			var itemTotal = $('.fastCartSummaryBox .ProductPrice').html();
+			
+			
+			if (itemTxt) {
+				// update the view cart item count on top menu
+				$('.CartLink span.item').html(itemTxt);
+				$('.CartLink span.total').html(itemTotal);
+			}
+			setProductListHeights(null, '.fastCartContent');
+			$('.fastCartContent .ProductList:not(.List) li').width(ThumbImageWidth);
+			$('body').addClass('customfastCart');
+		},
+		onClose: function() {
+			$('body').removeClass('customfastCart');
+			if (window.location.href.match(config.ShopPath + '/cart.php')) {
+				// reload if we are on the cart page
+				$('#ModalContainer').remove();
+				window.location = window.location.href
+			} else {
+				$('#ModalContainer').remove();
+			}
+		}
+	}, modalOptions);
+
+	$.iModal.close();
+	$.iModal(modalOptions);
+}
+</script>	
