@@ -1,0 +1,26 @@
+.Content.BorderLeft {
+padding-left: 50px;
+border-left: solid #dedede 1px;	
+}
+.M40 {
+margin-left: 40px;
+margin-right: 40px;	
+}
+.M20 {
+margin-left: 20px;
+margin-right: 20px;	
+}
+.btn.next {
+background-image: url(../../Outdoor/images/white/btnNext.png) !important;
+background-position: 12px 50% !important;
+background-repeat: no-repeat !important;
+padding-left: 33px;
+margin-top: 0;
+}
+.btn.back {
+background-image: url(../../Outdoor/images/white/btnPrev.png) !important;
+background-position: 12px 50% !important;
+background-repeat: no-repeat !important;
+padding-left: 33px;
+margin-top: 0;
+}
