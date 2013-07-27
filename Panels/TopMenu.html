@@ -1,0 +1,32 @@
+	%%GLOBAL_OptimizerLinkScript%%
+
+		
+		
+	<div id="TopMenu">
+		<div class="Inner">
+			<ul>
+				<!--li><div class="phoneIcon">%%GLOBAL_StorePhoneNumber%%</div></li-->
+				<li style="%%GLOBAL_LiveChatCodeEnabled%%" class="HeaderLiveChat">
+					%%GLOBAL_LiveChatCode%%
+				</li>
+				%%SNIPPET_TopMenuGiftCertificates%%
+				<li style="display:%%GLOBAL_HideAccountOptions%%" class="First"><a href="%%GLOBAL_ShopPath%%/account.php">%%LNG_YourAccount%%</a>&nbsp;</li>
+				<li style="display:%%GLOBAL_HideAccountOptions%%">
+					<div class="accLink">
+						%%GLOBAL_LoginOrLogoutText%%
+					</div>
+				</li>
+			</ul>
+			<div class="FloatRight">
+				<div class="currency-converter">
+					<p>Currency Displayed in <span class="selCurr"></span></p>	
+					%%Panel.SideCurrencySelector%%
+				</div><!-- currency-converter -->				
+				<div style="display:%%GLOBAL_HideWishlist%%" class="wishLink"><a href="%%GLOBAL_ShopPath%%/wishlist.php">Wish Lists</a></div>
+				<div style="display:%%GLOBAL_HideCartOptions%%" class="CartLink"><a href="%%GLOBAL_ShopPathNormal%%/cart.php">%%LNG_ViewCart%% (<span class="item">0</span>) <span class="total">0.00</span>  <span class="curr">&nbsp;&nbsp;&nbsp;</span></a></div>
+				<a href="%%GLOBAL_ShopPath%%/checkout.php" class="checkout" style="display:%%GLOBAL_HidePurchasingOptions%%">Checkout</a>
+				
+				<div class="clear"></div>
+			</div>
+		</div><!-- Inner -->
+	</div><!-- TopMenu -->	
